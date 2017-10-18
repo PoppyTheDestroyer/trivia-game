@@ -117,7 +117,7 @@ var whoM = {
     }
 }
 var whoN = {
-    quest: "What TV show is Rose forced to play a futuristic, deadly version of in the episode Bad Wolf?",
+    quest: "What TV show is Rose forced to play a futuristic, deadly version of in the episode <i>Bad Wolf</i>?",
     choices: {
         ansA: "Big Brother",
         ansB: "Who Wants to be a Millionaire",
@@ -161,11 +161,34 @@ var whoR = {
         cor: "2 billion years"
     }
 }
+
+
+var qas = [
+    {
+        quest: "How long was the Doctor trapped in the Confession Dial?",
+        choices: {
+            ansA: "2 years",
+            ansB: "2,000 years",
+            ansC: "2 million years",
+            cor: "2 billion years"
+        }
+    },
+    {
+    quest: "According to history books, by what name is Rory best known?",
+    choices: {
+        ansA: "Captain Jack",
+        ansB: "The Face of Boe",
+        ansC: "Col. Runaway",
+        cor: "The Last Centaurian"
+    }
+}
+]
+
+qas[1].quest
 //Array of object names
-var questions = [whoA, whoB, whoC, whoD, whoE, whoF, whoG, whoH, whoI, whoJ, whoK, whoL, whoM, whoN, WhoO, whoP, whoQ, whoR]
-//var ansChoices = [obj.choices.ansA, obj.choices.ansB, obj.choices.ansC, obj.choices.cor]
+var questions = [whoA.quest, whoB, whoC, whoD, whoE, whoF, whoG, whoH, whoI, whoJ, whoK, whoL, whoM, whoN, WhoO, whoP, whoQ, whoR]
+var ansChoices = [obj.choices, obj.choices.ansB, obj.choices.ansC, obj.choices.cor]
 //script to randomly choose question from above array
-obj = shuffle(questions);
 console.log(obj);
 //splice method
 
