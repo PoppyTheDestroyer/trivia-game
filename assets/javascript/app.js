@@ -1,4 +1,4 @@
-//Object containing questions/answers, as well as differentiating correct answer
+//Array of objects containing questions/answers, as well as differentiating correct answer
 var questions = [{
     quest: "What is the title of the first episode featuring the 10th Doctor?",
     choices: {
@@ -180,13 +180,38 @@ var questions = [{
     }
 }]
 
-//Array of object names
-var ansChoices = [obj.choices, obj.choices.ansB, obj.choices.ansC, obj.choices.cor]
+//Array of answer choices
 //script to randomly choose question from above array
-console.log(questions[1].quest);
 //splice method
 
+function pickQuests() {
+    questions.sort(function sortQuests(a, b) {
+        return 0.5 - Math.random()
+    });
+    questions.splice(9, 10);
+};
 //display question and answer choices (choices as buttons)
+//sort answer choices so they always appear in a different order
+for (i = 0; i < 10; i += 1) {
+    document.getElementById("question").innerHTML = questions[i].quest;
+};
+function choiceButs() {
+    var ansChoices = [questions[i].choices];
+    ansChoices.sort(function sortButs(a, b, ) {
+        return 0.5 - Math.random();
+        document.getElementById("optionOne").innerHTML = questions[i].choices[0];
+        document.getElementById("optionTwo").innerHTML = questions[i].choices[1];
+        document.getElementById("optionThree").innerHTML = questions[i].choices[2];
+        document.getElementById("optionFour").innerHTML = questions[i].choices[3];
+    });
+    
+};
+pickQuests();
+choiceButs();
+
+console.log(questions[i].quest);
+console.log(questions[i].choices);
+
 
 //display timer
 
@@ -206,4 +231,4 @@ console.log(questions[1].quest);
 //create time-out function that hides question/answers
 
 //
-console.log(whoC.quest);
+console.log();
