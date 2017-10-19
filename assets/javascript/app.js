@@ -59,7 +59,7 @@ var questions = [{
     ]
 },
 {
-    quest: "Which word or phrase is not commonly said by the 11th Doctor?",
+    quest: "Which word or phrase is NOT commonly said by the 11th Doctor?",
     choices: ["Geronimo!", "Bowties are cool", "Come along, Pond", "Allons-y!"
     ]
 },
@@ -85,16 +85,6 @@ var questions = [{
     quest: "How long was the Doctor trapped in the Confession Dial?",
     choices: ["2 years", "2,000 years", "2 million years", "2 billion years"
     ]
-},
-{
-    quest: "How long was the Doctor trapped in the Confession Dial?",
-    choices: ["2 years", "2,000 years", "2 million years", "2 billion years"
-    ]
-},
-{
-    quest: "According to history books, by what name is Rory best known?",
-    choices: ["Captain Jack", "The Face of Boe", "Col. Runaway", "The Last Centaurian"
-    ]
 }]
 
 //Array of answer choices
@@ -108,7 +98,7 @@ function pickQuests() {
     questions.sort(function sortQuests(a, b) {
         return 0.5 - Math.random()
     });
-    questions.splice(9, 10);
+    questions.splice(9, 8);
 };
 function choiceButs(i) {
     console.log(questions[i]);
