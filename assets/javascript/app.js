@@ -5,63 +5,51 @@ var questions = [{
 },
 {
     quest: "If you were to come face to face with a Dalek, what you most likely hear it say?",
-    choices: ["Eradicate", "Eliminate", "Evaluate", "Exterminate"
-    ]
+    choices: ["Eradicate", "Eliminate", "Evaluate", "Exterminate"]
 },
 {
     quest: "In the episode <i>A Good Man Goes to War</i>, the Doctor gives Col. Manton a new name. What was the new name?",
-    choices: ["Col. Surrender", "Col. Bravery", "Col. Sadface", "Col. Runaway"
-    ]
+    choices: ["Col. Surrender", "Col. Bravery", "Col. Sadface", "Col. Runaway"]
 },
 {
     quest: "Which of the following is NOT one of the names used by the character played by Maisie Williams?",
-    choices: ["Me", "Ashildr", "The Knightmare", "Arya",
-    ]
+    choices: ["Me", "Ashildr", "The Knightmare", "Arya",]
 },
 {
     quest: "How long did Rory stand guard over the Pandorica while Amy was trapped inside?",
-    choices: ["2 years", "20 years", "200 years", "2,000 years"
-    ]
+    choices: ["2 years", "20 years", "200 years", "2,000 years"]
 },
 {
     quest: "By what name is Melody Pond best known?",
-    choices: ["Clara Oswald", "Rose Tyler", "Martha Jones", "River Song"
-    ]
+    choices: ["Clara Oswald", "Rose Tyler", "Martha Jones", "River Song"]
 },
 {
     quest: "What famous artist did Amy and the Doctor go back in time to help?",
-    choices: ["Jackson Pollock", "Leonardo da Vinci", "Michaelangelo", "Vincent van Gogh"
-    ]
+    choices: ["Jackson Pollock", "Leonardo da Vinci", "Michaelangelo", "Vincent van Gogh"]
 },
 {
     quest: "What performer played the War Doctor?",
-    choices: ["Simon Pegg", "Emma Thompson", "Emma Watson:", "John Hurt"
-    ]
+    choices: ["Simon Pegg", "Emma Thompson", "Emma Watson:", "John Hurt"]
 },
 {
     quest: "What does TARDIS stand for?",
-    choices: ["Temporaral Aerial Redistributing Device Integration System", "Technical Array Randomizer Deployment in Science", "Terminal Alloy Restrictive Development Inverting Scenario", "Time and Relative Dimension in Space"
-    ]
+    choices: ["Temporaral Aerial Redistributing Device Integration System", "Technical Array Randomizer Deployment in Science", "Terminal Alloy Restrictive Development Inverting Scenario", "Time and Relative Dimension in Space"]
 },
 {
     quest: "What terrifying alien species is introduced in the episode <i>Blink</i>?",
-    choices: ["The Cybermen", "The Atraxi", "The Salarians", "The Weeping Angels"
-    ]
+    choices: ["The Cybermen", "The Atraxi", "The Salarians", "The Weeping Angels"]
 },
 {
     quest: "What Doctor Who spinoff's title is an anagram of Doctor Who?",
-    choices: ["Hoot Crowd", "Hot Rod Cow", "Two Cod Roo", "Torchwood"
-    ]
+    choices: ["Hoot Crowd", "Hot Rod Cow", "Two Cod Roo", "Torchwood"]
 },
 {
     quest: "What ultimately happens to Amy and Rory?",
-    choices: ["They're killed by the Weeping Angels", "They are converted into Cybermen", "They cease to have existed after standing too close to the crack in spacetime", "They live long and presumably happy lives together"
-    ]
+    choices: ["They're killed by the Weeping Angels", "They are converted into Cybermen", "They cease to have existed after standing too close to the crack in spacetime", "They live long and presumably happy lives together"]
 },
 {
     quest: "Which word or phrase is NOT commonly said by the 11th Doctor?",
-    choices: ["Geronimo!", "Bowties are cool", "Come along, Pond", "Allons-y!"
-    ]
+    choices: ["Geronimo!", "Bowties are cool", "Come along, Pond", "Allons-y!"]
 },
 {
     quest: "What TV show is Rose forced to play a futuristic, deadly version of in the episode <i>Bad Wolf</i>?",
@@ -72,19 +60,12 @@ var questions = [{
     choices: ["Lady Cassandra", "Jack Harkness", "Professor Yana", "The Face of Boe"]
 },
 {
-    quest: "The 13th Doctor will have the distinction of the first version to be played by a woman. What is the appropriate response to this news?",
-    choices: ["I'm a giant loser and I hate this news because the Doctor has always been a man", "I suck because I think this is terrible because I'm an anonymous misogynist Internet troll", "I will die alone because I can't handle the Doctor being played by a woman", "Dude, that's awesome!"
-    ]
-},
-{
     quest: "According to history books, by what name is Rory best known?",
-    choices: ["Captain Jack", "The Face of Boe", "Col. Runaway", "The Last Centaurian"
-    ]
+    choices: ["Captain Jack", "The Face of Boe", "Col. Runaway", "The Last Centaurian"]
 },
 {
     quest: "How long was the Doctor trapped in the Confession Dial?",
-    choices: ["2 years", "2,000 years", "2 million years", "2 billion years"
-    ]
+    choices: ["2 years", "2,000 years", "2 million years", "2 billion years"]
 }]
 
 //Array of answer choices
@@ -98,10 +79,9 @@ function pickQuests() {
     questions.sort(function sortQuests(a, b) {
         return 0.5 - Math.random()
     });
-    questions.splice(9, 8);
+    questions.splice(9, 7);
 };
 function choiceButs(i) {
-    console.log(questions[i]);
     questions[i].choices.sort(function sortButs(a, b) {
         return 0.5 - Math.random();
         document.getElementById("optionOne").innerHTML = questions[i].choices[0];
@@ -111,14 +91,11 @@ function choiceButs(i) {
     });
 };
 for (i = 0; i < 10; i += 1) {
-    console.log(questions[i]);
     document.getElementById("question").innerHTML = questions[i].quest;
     pickQuests();
     choiceButs(i);
     console.log(questions[i].quest);
     console.log(questions[i].choices);
-    
-   
 };
 
 
